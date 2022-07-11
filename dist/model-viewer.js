@@ -343,7 +343,7 @@ AFRAME.registerComponent('model-viewer', {
       this.oldHandY = this.oldHandY || intersectionPosition.y;
   
       modelPivotEl.object3D.rotation.y -= (this.oldHandX - intersectionPosition.x) / 4;
-      modelPivotEl.object3D.rotation.x += (this.oldHandY - intersectionPosition.y) / 4;
+      modelPivotEl.object3D.rotation.x += (0) / 4;
   
       this.oldHandX = intersectionPosition.x;
       this.oldHandY = intersectionPosition.y;
@@ -389,10 +389,10 @@ AFRAME.registerComponent('model-viewer', {
       modelPivotEl.object3D.rotation.y -= dX / 200;
       this.oldClientX = evt.touches[0].clientX;
   
-      modelPivotEl.object3D.rotation.x -= dY / 100;
+      modelPivotEl.object3D.rotation.x -= 0;
   
       // Clamp x rotation to [-90,90]
-      modelPivotEl.object3D.rotation.set = Math.min(Math.max(0, modelPivotEl.object3D.rotation.x), 0);
+      modelPivotEl.object3D.rotation.set = 0;
       this.oldClientY = evt.touches[0].clientY;
     },
   
