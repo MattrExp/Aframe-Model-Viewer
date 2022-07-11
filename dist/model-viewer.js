@@ -1,3 +1,4 @@
+/* global AFRAME, THREE */
 AFRAME.registerComponent('model-viewer', {
     schema: {
       gltfModel: {default: ''},
@@ -227,8 +228,8 @@ AFRAME.registerComponent('model-viewer', {
   
       modelPivotEl.appendChild(modelEl);
   
-      shadowEl.setAttribute('rotation', '-90 -30 0');
-      shadowEl.setAttribute('geometry', 'primitive: plane; width: 1.0; height: 1.0');
+      shadowEl.setAttribute('rotation', '-90 -30 90');
+      shadowEl.setAttribute('geometry', 'primitive: plane; width: 2.0; height: 1.0');
       shadowEl.setAttribute('material', 'src: #shadow; transparent: true; opacity: 0.40');
       shadowEl.setAttribute('hide-on-enter-ar', '');
   
@@ -481,7 +482,8 @@ AFRAME.registerComponent('model-viewer', {
       // Reset position and scales.
       modelEl.object3D.position.set(0, 0, 0);
       modelEl.object3D.scale.set(1.0, 1.0, 1.0);
-      this.cameraRigEl.object3D.position.z = 3.0;
+      modelEl.object3D.rotation.set(0, 0.5, 0)
+      this.cameraRigEl.object3D.position.z = 2.0;
   
       // Calculate model size.
       modelEl.object3D.updateMatrixWorld();
