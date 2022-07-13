@@ -137,7 +137,7 @@ AFRAME.registerComponent('model-viewer2', {
     submitURLButtonClicked: function (evt) {
       var modelURL = this.inputEl.value;
       if (modelURL === this.inputDefaultValue) { return; }
-      this.el.setAttribute('model-viewer', 'gltfModel', modelURL);
+      this.el.setAttribute('model-viewer2', 'gltfModel', modelURL);
     },
   
     initCameraRig: function () {
