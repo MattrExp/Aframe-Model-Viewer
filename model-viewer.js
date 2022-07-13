@@ -175,8 +175,8 @@ AFRAME.registerComponent('model-viewer', {
       backgroundEl.setAttribute('geometry', {primitive: 'sphere', radius: 65});
       backgroundEl.setAttribute('material', {
         shader: 'background-gradient',
-        colorTop: '#dbe0e4',
-        colorBottom: '#dbe0e4',
+        colorTop: '#000000',
+        colorBottom: '#000000',
         side: 'back'
       });
       backgroundEl.setAttribute('hide-on-enter-ar', '');
