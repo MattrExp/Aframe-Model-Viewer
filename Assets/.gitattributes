@@ -1,0 +1,2 @@
+Harman[[:space:]]Car.gltf filter=lfs diff=lfs merge=lfs -text
+HarmanCar.gltf filter=lfs diff=lfs merge=lfs -text
